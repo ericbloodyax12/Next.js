@@ -1,0 +1,15 @@
+.navBarContainer {
+    background-color: black;
+
+}
+
+.navList {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.navList__link {
+    text-decoration: none;
+    color: white;
+}
