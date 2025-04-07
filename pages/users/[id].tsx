@@ -22,6 +22,9 @@ export default function ({user}: TUserPageProps) {
 }
 
 export const getServerSideProps = (async ({params}) => {
+    if (!params || typeof params.id !== 'string') {
+        return { notFound: true };
+    }
     console.log(params)
     const res = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`);
     const user = await res.json()

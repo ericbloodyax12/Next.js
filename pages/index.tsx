@@ -1,5 +1,7 @@
 import React from 'react';
 import {NavBar} from "../components/navBar/NavBar";
+import Head from "next/head";
+import {MainContainer} from "../components/mainContainer/MainContainer";
 
 
 
@@ -7,16 +9,18 @@ type TIndexProps = {}
 
 const Index: React.FC<TIndexProps> = (props) => {
     return (
-        <div style={{
-            padding: "10px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "10px"
+
+            <MainContainer style={{
+                padding: "10px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "10px"
             }}
-        >
-            <NavBar/>
-            <h1>Main page</h1>
-        </div>
+            >
+                <h1>Main page</h1>
+            </MainContainer>
+
+
     );
 }
 
